@@ -1,4 +1,7 @@
-package com.alg.coco;
+package com.algorithm.tree;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author catxu
@@ -8,7 +11,7 @@ public class TreeImpl {
 	public static void main(String[] args) {
  		String node0 = new String("root");
  		int parent = -1;
-		PNode<String> pnode = new PNode<String>(node0, parent);
+		PNode pnode = new PNode(node0, parent);
 		System.out.println(pnode.getParent() + ", " + pnode.getData());
 
 		ParentTree ptree = new ParentTree(pnode, 100);
@@ -16,12 +19,17 @@ public class TreeImpl {
 		System.out.println(ptree.getSize());
 
 		String s2 = "node1";
-		PNode<String> pnode2 = new PNode<String>(s2);
+		PNode pnode2 = new PNode(s2);
 		ptree.addNode(pnode2, pnode);
 
-		System.out.println(ptree.getParent(pnode2));
-		System.out.println(ptree.getRoot());
+//		System.out.println(ptree.getParent(pnode2));
 		System.out.println(ptree.getSize());
+		
+		List<PNode> list = new ArrayList<PNode>();
+		list = ptree.geChildren(pnode);
+		for (PNode pNode3 : list) {
+			System.out.println(pNode3.getData());
+		}
 	}
 
 }
