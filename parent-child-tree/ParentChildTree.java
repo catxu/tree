@@ -128,4 +128,12 @@ public class ParentChildTree {
 		}
 		return list;
 	}
+
+	public void listAllNodes() {
+//		System.out.println(nodes.length);
+		System.out.println("List all nodes: ");
+		for (int i = 0; i < num; i++) {
+			System.out.println(nodes[i].getData());
+		}
+	}
 }
