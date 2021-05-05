@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 /**
  * @author catxu
- * @date 2016.07.17
  */
 // public class PNode<String> implements Serializable {
 // private static final long serialVersionUID = 1L;

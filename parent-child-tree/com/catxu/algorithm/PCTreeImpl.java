@@ -5,7 +5,6 @@ import java.util.List;
 
 /**
  * @author catxu
- *
  */
 public class PCTreeImpl {
 

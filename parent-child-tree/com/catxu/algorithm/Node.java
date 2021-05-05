@@ -23,7 +23,6 @@ public class Node {
 		this.parent = parent;
 		this.data = data;
 	}
-	// 不可能在一棵已经构造好的树中，为某个节点指定其子节点
 	// public Node(int parent, String data, ChildNode child) {
 	// super();
 	// this.parent = parent;

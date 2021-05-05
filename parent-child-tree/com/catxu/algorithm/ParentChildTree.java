@@ -5,7 +5,6 @@ import java.util.List;
 
 /**
  * @author catxu
- *
  */
 public class ParentChildTree {
 	private Node[] nodes;
@@ -13,7 +12,6 @@ public class ParentChildTree {
 	private int num;
 	// private ChildNode chNode;
 
-	// 初始化一棵有 length 个节点的 parent-child 树，并指定其root节点。
 	public ParentChildTree(String data, int length) {
 		super();
 		this.size = length;
@@ -24,30 +22,6 @@ public class ParentChildTree {
 		nodes[0].setParent(-1);
 		num++;
 	}
-
-	// // 添加节点，并指定其父节点
-	// public void addNode(Node pnode, String data) {
-	// int parent = getPos(pnode);
-	// for (int i = 0; i < size; i++) {
-	// if (nodes[i] == null) {
-	// nodes[i] = new Node(parent, data);
-	// if (pnode.getFirstChild() == null) {
-	// pnode.setFirstChild(new ChildNode(i, null));
-	// } else {
-	// ChildNode chnode = pnode.getFirstChild();
-	// // chnode = chnode.getNextChNode();
-	// while (chnode != null) {
-	// chnode = chnode.getNextChNode();
-	// }
-	// // chnode.ncNode = new ChildNode(i, null);
-	// chnode = new ChildNode(i, null);
-	// }
-	// num++;
-	// return;
-	// }
-	// }
-	// throw new RuntimeException("树已满");
-	// }
 
 	public void addNode(int parent, String data) {
 		// int parent = getPos(pnode);
@@ -75,7 +49,7 @@ public class ParentChildTree {
 				return;
 			}
 		}
-		throw new RuntimeException("树已满");
+		throw new RuntimeException("");
 	}
 
 	public int getPos(Node node) {
@@ -123,7 +97,7 @@ public class ParentChildTree {
 			// int i = cn.index;
 			list.add(nodes[cn.index]);
 			System.out.println("[Debug - getChildNode] " + cn.index);
-			cn = cn.getNextChNode(); // 需要在代码里设置 setNextChNode();
+			cn = cn.getNextChNode(); //  setNextChNode();
 			System.out.println("[Debug - getChildNode] " + cn);
 		}
 		return list;

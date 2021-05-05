@@ -5,7 +5,6 @@ import java.util.List;
 
 /**
  * @author catxu
- * @date 2016.07.17
  */
 public class TreeImpl {
 	public static void main(String[] args) {

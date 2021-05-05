@@ -6,11 +6,9 @@ import java.util.List;
 
 /**
  * @author catxu
- * @date 2016.07.17
  */
 // 双亲表示法
 public class ParentTree implements Serializable {
-	private static final long serialVersionUID = 1L;
 	// private final int DEFAULT_TREE_SIZE = 100;
 	PNode[] nodes;
 	private int parent;
